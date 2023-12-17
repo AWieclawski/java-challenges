@@ -17,15 +17,15 @@ public class OrderRepository {
         Date thisDate = new Date();
         Instant thisInstant = Instant.now();
         List<Order> list = new ArrayList<>();
-        list.add(Order.builder().id(11L).createdAt(addDays(thisDate, -121)).sent(thisInstant.plus(-111L, ChronoUnit.DAYS)).build());
-        list.add(Order.builder().id(22L).createdAt(addDays(thisDate, -91)).sent(thisInstant.plus(-71L, ChronoUnit.DAYS)).build());
-        list.add(Order.builder().id(33L).createdAt(addDays(thisDate, -191)).sent(thisInstant.plus(-171L, ChronoUnit.DAYS)).build());
-        list.add(Order.builder().id(43L).createdAt(addDays(thisDate, -71)).sent(thisInstant.plus(-41L, ChronoUnit.DAYS)).build());
-        list.add(Order.builder().id(55L).createdAt(addDays(thisDate, -41)).sent(thisInstant.plus(-21L, ChronoUnit.DAYS)).build());
+        list.add(Order.builder().id(11L).createdAt(addDays(thisDate, -1211234)).sent(thisInstant.plus(-1111234L, ChronoUnit.SECONDS)).build());
+        list.add(Order.builder().id(22L).createdAt(addDays(thisDate, -911234)).sent(thisInstant.plus(-711234L, ChronoUnit.SECONDS)).build());
+        list.add(Order.builder().id(33L).createdAt(addDays(thisDate, -1911234)).sent(thisInstant.plus(-1711234L, ChronoUnit.SECONDS)).build());
+        list.add(Order.builder().id(43L).createdAt(addDays(thisDate, -711234)).sent(thisInstant.plus(-411234L, ChronoUnit.SECONDS)).build());
+        list.add(Order.builder().id(55L).createdAt(addDays(thisDate, -411234)).sent(thisInstant.plus(-211234L, ChronoUnit.SECONDS)).build());
         return list;
     }
 
-    private Date addDays(Date date, int days) {
-        return date != null ? new DateTime(date).plusDays(days).toDate() : null;
+    private Date addDays(Date date, int seconds) {
+        return date != null ? new DateTime(date).plusSeconds(seconds).toDate() : null;
     }
 }
