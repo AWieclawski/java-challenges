@@ -21,6 +21,7 @@ public class OrderRepository {
         list.add(Order.builder().id(22L).createdAt(addDays(thisDate, -91)).sent(thisInstant.plus(-71L, ChronoUnit.DAYS)).build());
         list.add(Order.builder().id(33L).createdAt(addDays(thisDate, -191)).sent(thisInstant.plus(-171L, ChronoUnit.DAYS)).build());
         list.add(Order.builder().id(43L).createdAt(addDays(thisDate, -71)).sent(thisInstant.plus(-41L, ChronoUnit.DAYS)).build());
+        list.add(Order.builder().id(55L).createdAt(addDays(thisDate, -41)).sent(thisInstant.plus(-21L, ChronoUnit.DAYS)).build());
         return list;
     }
 
